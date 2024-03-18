@@ -12,7 +12,7 @@ function App() {
       <Search/>
       <div className="flex flex-col gap-8 backdrop-blur-sm bg-white/10 h-1/2 w-1/4 text-center rounded-xl">
         <Climate/>
-        <div className="flex justify-around m-5 p-2">
+        <div className="flex justify-around m-5 p-2 gap-5">
           <WindSpeed/>
           <Humidity/>
         </div>

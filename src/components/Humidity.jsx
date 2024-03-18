@@ -2,13 +2,14 @@ import React from 'react'
 
 const Humidity = () => {
   return (
-    <div className="flex flex-col">
-        <div className="flex">
-            <img className="rounded-full w-8 h-8" src="src/assets/images/humidity.png" alt="image description"/>
-            <div className="text-md ml-2 p-1">Humidity</div>
+
+    <div className="flex gap-2">
+        <img className="rounded-full w-12 h-12" src="src/assets/images/humidity.png" alt="image description"/>
+        <div className="flex-col p-1 text-left">
+            <div className="text-md">50%</div>
+            <div className="text-md">Humidity</div>
         </div>
-        <div className="text-sm m-4">2 Km/hr</div>
-  </div>
+    </div>
   )
 }
 

@@ -2,12 +2,12 @@ import React from 'react'
 
 const WindSpeed = () => {
   return (
-    <div className="flex flex-col">
-        <div className="flex">
-            <img className="rounded-full w-8 h-8" src="src/assets/images/wind.png" alt="image description"/>
-            <div className="text-md ml-2 p-1">Wind Speed</div>
+    <div className="flex gap-2">
+        <img className="rounded-full w-14 h-14" src="src/assets/images/wind.png" alt="image description"/>
+        <div className="flex-col p-1 text-left">
+            <div className="text-md">2 Km/hr</div>
+            <div className="text-md">Wind Speed</div>
         </div>
-        <div className="text-sm m-4">2 Km/hr</div>
     </div>
   )
 }
