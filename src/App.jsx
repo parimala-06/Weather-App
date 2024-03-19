@@ -3,6 +3,12 @@ import Search from "./components/SearchBar.jsx"
 import Climate from "./components/Climate.jsx"
 import WindSpeed from "./components/WindSpeed.jsx"
 import Humidity from "./components/Humidity.jsx"
+import clouds  from './assets/images/clouds.png'
+import clear  from './assets/images/clear.png'
+import rain  from './assets/images/rain.png'
+import drizzle  from './assets/images/drizzle.png'
+import thunderstrom  from './assets/images/thunderstrom.png'
+import snow  from './assets/images/snow.png'
 
 function App() {
   const [placeName, setPlaceName] = useState("");
@@ -31,22 +37,25 @@ function App() {
       setDescription(data.weather[0].main);
 
       if (data.weather[0].main == "Clouds"){
-        setImage("clouds");
+        setImage(clouds);
       }
       else if(data.weather[0].main == "Clear"){
-        setImage("clear");
+        setImage(clear);
       }
       else if(data.weather[0].main == "Drizzle"){
-        setImage("drizzle");
+        setImage(drizzle);
       }
       else if(data.weather[0].main == "Rain"){
-        setImage("rain");
+        setImage(rain);
       }
       else if(data.weather[0].main == "Thunderstrom"){
-        setImage("thunderstrom");
+        setImage(thunderstrom);
+      }
+      else if(data.weather[0].main == "Snow" || "Fog"){
+        setImage(snow);
       }
       else{
-        setImage("clouds");
+        setImage(clouds);
       }
     } catch (error) {
       console.error("Error fetching weather data:", error);
