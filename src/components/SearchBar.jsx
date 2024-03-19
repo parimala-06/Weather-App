@@ -1,4 +1,5 @@
 import React from 'react'
+import search from '../assets/images/search.png'
 
 const Search = ({ onChange , onSearch}) => {
 
@@ -20,7 +21,7 @@ const Search = ({ onChange , onSearch}) => {
           />  
       </div>
         <button onClick={handleButtonClick} className='mb-5 flex items-center bg-white/10 rounded-3xl p-2 h-12'>
-          <img src="src/assets/images/search.png" alt="Search" className="p-2 h-10" />
+          <img src={search} alt="Search" className="p-2 h-10" />
         </button>
     </div>
   )
