@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useState} from "react"
 import Search from "./components/SearchBar.jsx"
 import Climate from "./components/Climate.jsx"
 import WindSpeed from "./components/WindSpeed.jsx"
@@ -31,22 +31,22 @@ function App() {
       setDescription(data.weather[0].main);
 
       if (data.weather[0].main == "Clouds"){
-        setImage("src/assets/images/clouds.png");
+        setImage("clouds");
       }
       else if(data.weather[0].main == "Clear"){
-        setImage("src/assets/images/clear.png");
+        setImage("clear");
       }
       else if(data.weather[0].main == "Drizzle"){
-        setImage("src/assets/images/drizzle.png");
+        setImage("drizzle");
       }
       else if(data.weather[0].main == "Rain"){
-        setImage("src/assets/images/rain.png");
+        setImage("rain");
       }
       else if(data.weather[0].main == "Thunderstrom"){
-        setImage("src/assets/images/thunderstrom.png");
+        setImage("thunderstrom");
       }
       else{
-        setImage("src/assets/images/clouds.png");
+        setImage("clouds");
       }
     } catch (error) {
       console.error("Error fetching weather data:", error);
