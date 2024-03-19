@@ -50,6 +50,7 @@ function App() {
       }
     } catch (error) {
       console.error("Error fetching weather data:", error);
+      alert("City not found. Kindly Spellcheck")
     }
   };
 
