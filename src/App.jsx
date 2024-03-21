@@ -9,6 +9,7 @@ import rain  from './assets/images/rain.png'
 import drizzle  from './assets/images/drizzle.png'
 import thunderstrom  from './assets/images/thunderstrom.png'
 import snow  from './assets/images/snow.png'
+import Tile from "./components/Tile.jsx"
 
 function App() {
   const [placeName, setPlaceName] = useState("");
@@ -35,23 +36,24 @@ function App() {
       setHumidity(data.main.humidity.toFixed(1));
       setWindSpeed(data.wind.speed.toFixed(1));
       setDescription(data.weather[0].main);
+      let description = data.weather[0].main;
 
-      if (data.weather[0].main == "Clouds"){
+      if (description == "Clouds"){
         setImage(clouds);
       }
-      else if(data.weather[0].main == "Clear"){
+      else if(description == "Clear"){
         setImage(clear);
       }
-      else if(data.weather[0].main == "Drizzle"){
+      else if(description == "Drizzle"){
         setImage(drizzle);
       }
-      else if(data.weather[0].main == "Rain"){
+      else if(description == "Rain"){
         setImage(rain);
       }
-      else if(data.weather[0].main == "Thunderstrom"){
+      else if(description == "Thunderstrom"){
         setImage(thunderstrom);
       }
-      else if(data.weather[0].main == "Snow" || "Fog"){
+      else if(description == "Snow" || "Fog"){
         setImage(snow);
       }
       else{
@@ -78,6 +80,7 @@ function App() {
           <Humidity humidity={humidity}/>
         </div>
       </div>
+      <Tile/>
     </div>
   )
 }
