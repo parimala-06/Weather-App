@@ -76,3 +76,8 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 - Create a new branch for your changes.
 - Commit your changes and push to your branch.
 - Submit a pull request.
+
+## Acknowledgements
+Special thanks to OpenWeatherMap for providing the weather data.
+
+This README provides an overview of the app, setup instructions, project structure, and some additional guidance. You can further customize it based on your specific requirements or project structure.
