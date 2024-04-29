@@ -1,3 +1,4 @@
+
 # Weather Application
 
 This is a weather application built with React and uses the OpenWeatherMap API to fetch weather data. It provides current weather conditions, including temperature, humidity, wind speed, and a visual representation of the weather, based on the given location.
@@ -28,6 +29,7 @@ To run the project locally, follow these steps:
 
 - Node.js and npm
 - An API key from [OpenWeatherMap](https://openweathermap.org/)
+- VS Code
 
 ### Installation
 
@@ -36,48 +38,57 @@ To run the project locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/weather-app.git
    cd weather-app
+   ```
 
-2. **Clone the repository**:
+2. **Install dependencies**:
 
    ```bash
    npm install
+   ```
 
 3. **Set up your environment variables**:
-   - Create a .env file in the root directory.
-   - Add your OpenWeatherMap API key:
-     
-      ```bash
-      REACT_APP_OPENWEATHER_API_KEY=your_api_key_here
-    
-5. **Running the App**:
-    - To run the app in development mode:
-      
-        ```bash
-        npm start
-  
-    - Open http://localhost:3000 in your web browser. The app will automatically reload if you make any changes to the code.
 
-6. **Building for Production**:
-    - To build the app for production:
-    
-      ```bash
-      npm run build
-  
-    - The output will be in the build/ directory.
+   - Create a `.env` file in the root directory.
+   - Add your OpenWeatherMap API key:
+
+     ```bash
+     REACT_APP_OPENWEATHER_API_KEY=your_api_key_here
+     ```
+
+### Running the App
+
+To run the app in development mode:
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your web browser. The app will automatically reload if you make any changes to the code.
+
+### Building for Production
+
+To build the app for production:
+
+```bash
+npm run build
+```
+
+The output will be in the `build/` directory.
 
 ## Known Issues and Troubleshooting
+
 - If you get a "City not found" error, make sure you entered the correct city name and spelled it correctly.
 - If you encounter any other errors, check the console output for details.
 
 ## Contributing
+
 Contributions are welcome! If you'd like to contribute, please follow these steps:
 
-- Fork the repository.
-- Create a new branch for your changes.
-- Commit your changes and push to your branch.
-- Submit a pull request.
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Commit your changes and push to your branch.
+4. Submit a pull request.
 
 ## Acknowledgements
-Special thanks to OpenWeatherMap for providing the weather data.
 
-This README provides an overview of the app, setup instructions, project structure, and some additional guidance. You can further customize it based on your specific requirements or project structure.
+Special thanks to [OpenWeatherMap](https://openweathermap.org/) for providing the weather data.
