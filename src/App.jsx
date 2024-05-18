@@ -9,7 +9,6 @@ import rain  from './assets/images/rain.png'
 import drizzle  from './assets/images/drizzle.png'
 import thunderstrom  from './assets/images/thunderstrom.png'
 import snow  from './assets/images/snow.png'
-import Tile from "./components/Tile.jsx"
 
 function App() {
   const [placeName, setPlaceName] = useState("");
@@ -19,7 +18,6 @@ function App() {
   const [description, setDescription] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [image, setImage] = useState("");
-
 
   const apiKey = "54d164f876854d9769bc70c9ab52cde8";
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&appid=${apiKey}&q=${searchQuery}`;
@@ -70,18 +68,18 @@ function App() {
     setSearchQuery(e.target.value);
   };
   return (
-    <div className="flex flex-col bg-[url('assets/images/bg2.jpg')] bg-contain items-center h-screen font-poppins">
-      <div className="text-center font-medium font-sans text-3xl m-4">Weather Application</div>
+    <div className="flex flex-col bg-[url('assets/images/bg2.jpg')] bg-contain items-center h-screen font-poppins overflow-hidden">
+      <div className="text-center font-medium font-sans text-3xl m-6">Weather Application</div>
       <Search onChange={handleSearchInputChange} onSearch={handleSearch} />
-      <div className="flex flex-col gap-8 backdrop-blur-sm bg-white/10 h-1/2 w-1/4 text-center rounded-xl">
+      <div className="flex flex-col gap-6 backdrop-blur-sm bg-white/10 h-1/2 w-1/4 text-center rounded-xl">
         <Climate place={placeName} temp={temp} description={description} image={image}/>
-        <div className="flex justify-around m-5 p-2 gap-5">
+        <div className="flex justify-around m-6 p-6 gap-5">
           <WindSpeed windSpeed = {windSpeed}/>
           <Humidity humidity={humidity}/>
         </div>
       </div>
-      <Tile/>
     </div>
+    
   )
 }
 
